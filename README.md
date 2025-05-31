@@ -1,54 +1,79 @@
-# Cisco-Packet-Tracer-Skills-Assessment
+# Cisco-Packet-Tracer-Network-Labs
 
-Bu proje, Cisco Packet Tracer kullanılarak tasarlanmış bir ağ topolojisi üzerinde temel anahtar (Switch) yapılandırma becerilerini sergileyen ve test eden bir uygulama laboratuvarıdır. Bu laboratuvar, özellikle VLAN (Virtual Local Area Network) oluşturma, Erişim Portları (Access Ports) ve Trunk Portları yapılandırma, anahtarlara IP adresi atama ve temel yönetim (hostname, enable secret, Telnet) gibi konulara odaklanmaktadır.
+Bu depo, Cisco Packet Tracer kullanılarak tasarlanmış çeşitli ağ topolojileri üzerinde farklı ağ yapılandırma senaryolarını ve becerilerini sergileyen bir laboratuvar koleksiyonudur. Her bir lab, belirli ağ kavramlarını ve yapılandırma yöntemlerini (VLAN'ler, Trunking, Inter-VLAN Routing, Temel Anahtar ve Yönlendirici Yapılandırmaları vb.) pekiştirmek amacıyla tasarlanmıştır.
 
 ## İçerik
 
-Bu depoda aşağıdaki dosyalar bulunmaktadır:
+Bu depo, aşağıdaki bağımsız ağ lablarını içermektedir:
 
-* `Lab3_VLAN_Uygulamasi.pkt` dosyası: Cisco Packet Tracer topoloji dosyası. Bu dosyayı Cisco Packet Tracer yazılımı ile açabilirsiniz.
+1.  **Lab3: Temel Switch ve VLAN Yapılandırması (SRWE Practice Pt Skills Assessment Part 2)**
+2.  **Lab4: Inter-VLAN Routing (Router on a Stick ve Legacy)**
 
-## Lab Hedefleri
+Her bir labın kendi `.pkt` dosyası bu deponun kök dizininde yer almaktadır.
 
-Bu Packet Tracer labı, aşağıdaki ana hedeflere ulaşmayı amaçlamaktadır:
+## Labların Ortak Hedefleri ve Özellikleri
 
-1.  **VLAN Oluşturma ve Yönetimi:**
-    * Tüm anahtarlarda (SW1, SW2, SW3) `VLAN2 (SUNUCULAR)`, `VLAN3 (BILGI_ISLEM)` ve `VLAN4 (MISAFIR)` adında VLAN'lar oluşturulması.
-2.  **Port Yapılandırması:**
-    * Belirli portların (1-10, 11-20, 21-24) ilgili VLAN'lara "Access Port" olarak atanması.
-    * Anahtarlar arası bağlantılar için ilgili portların "Trunk Port" olarak yapılandırılması.
-3.  **IP Adresi Yönetimi:**
-    * Anahtarların VLAN3 arayüzlerine IP adresleri atanması (`192.168.3.11/24`, `192.168.3.12/24`, `192.168.3.13/24`).
-4.  **Temel Anahtar Yönetimi:**
-    * Anahtarlarda hostname belirlenmesi (`SW1`, `SW2`, `SW3`).
-    * `enable secret` şifresi (`cisco`) ve Telnet erişimi için `vty` şifresi (`cisco`) yapılandırması.
+Genel olarak, bu lablar aşağıdaki becerileri geliştirmeyi ve doğrulamayı amaçlar:
 
-## Erişilebilirlik Testleri (Lab Başarı Kriterleri)
-
-Yapılandırmalar tamamlandıktan sonra aşağıdaki erişilebilirlik testleri başarıyla gerçekleştirilmelidir:
-
-* **A) VLAN İçi Sunucu Erişimi:** Sunucu1, aynı VLAN'deki Sunucu2 ve Sunucu3'e ping atabilmelidir.
-* **B) VLAN İçi Misafir Cihaz Erişimi:** Misafir1, aynı VLAN'deki Misafir2, Misafir3 ve Misafir4'e ping atabilmelidir.
-* **C) VLAN İçi Bilgi İşlem ve Anahtar Erişimi:** BilgiIslem1, aynı VLAN'deki diğer BilgiIslem bilgisayarlarına (BilgiIslem2, BilgiIslem3, BilgiIslem4) ve tüm anahtarlara (SW1, SW2, SW3) ping atabilmelidir.
-* **D) VLAN'ler Arası Erişim Kontrolü:** Farklı VLAN'ler arasında doğrudan erişim (ping) olmamalıdır (Çünkü Layer 3 cihaz mevcut değildir).
-* **E) CDP Komşuluk Kontrolü:** SW2 üzerinde `show cdp neighbors` komutu çalıştırılarak komşu cihazların (SW1, SW3) hangi portlardan bağlandığı doğrulanmalıdır.
-* **F) Uzaktan Yönetim (Telnet):** BilgiIslem1'den tüm anahtarlara (SW1, SW2, SW3) Telnet ile erişilebilmelidir.
+* Cisco anahtarlarında (2960 serisi) VLAN oluşturma ve yönetimi.
+* Access (Erişim) ve Trunk (Gövde) port yapılandırmaları.
+* Anahtarlara ve yönlendiricilere IP adresi atama.
+* VLAN içi ve VLAN'ler arası iletişimin (ping testleri) sağlanması.
+* Yönlendiricilerde temel arayüz yapılandırmaları.
+* Cisco Discovery Protocol (CDP) gibi yönetim protokollerinin kullanımı.
+* Uzaktan yönetim (Telnet) yapılandırması ve testi.
 
 ## Kurulum ve Kullanım
 
-1.  Bu depoyu bilgisayarınıza klonlayın veya indirin.
-2.  `Lab3_VLAN_Uygulamasi.pkt` dosyasını Cisco Packet Tracer yazılımı ile açın.
-3.  Yukarıda belirtilen "Yapılacaklar" adımlarını takip ederek ağ cihazlarını yapılandırın.
-4.  "Lab Hedefleri" bölümündeki testleri yaparak yapılandırmalarınızı doğrulayın.
+1.  Bu depoyu bilgisayarınıza klonlayın veya ZIP olarak indirin.
+2.  İlgili `.pkt` dosyasını (örn: `Lab3_VLAN_Uygulamasi.pkt` veya `Lab4_IVR_Uygulamasi.pkt`) Cisco Packet Tracer yazılımı ile açın.
+3.  Her labın ilgili bölümünde belirtilen talimatları ve hedefleri takip ederek cihazları yapılandırın.
+4.  Yapılandırmalarınızı doğrulamak için belirtilen testleri gerçekleştirin.
 
 ## Gereksinimler
 
 * Cisco Packet Tracer yazılımı (Tercihen en son sürüm).
 
+## Lab Detayları
+
+### Lab 1 (Lab3): Temel Switch ve VLAN Yapılandırması
+
+**Dosya Adı:** `Lab3_VLAN_Uygulamasi.pkt`
+
+Bu lab, özellikle VLAN oluşturma, erişim portu ve trunk port yapılandırmaları, anahtarlara IP adresi atama ve temel yönetim (hostname, enable secret, Telnet) konularına odaklanır.
+
+**Hedefler:**
+
+* Sunucuların aynı VLAN içinde birbirine ping atabilmesi.
+* Misafir laptop'larının aynı VLAN içinde birbirine ping atabilmesi.
+* Bilgi İşlem bilgisayarlarının ve anahtarların aynı VLAN içinde birbirine ping atabilmesi.
+* Farklı VLAN'ler arasında Layer 3 cihaz olmadan iletişim kurulamadığının doğrulanması (erişim olmamalıdır).
+* `show cdp neighbors` komutunun çalıştırılması ve komşu cihazların not edilmesi.
+* Bilgi İşlem bilgisayarından anahtarlara Telnet ile erişilebilmesi.
+
+### Lab 2 (Lab4): Inter-VLAN Routing (Router on a Stick ve Legacy)
+
+**Dosya Adı:** `Lab4_IVR_Uygulamasi.pkt`
+
+Bu lab, iki yaygın Inter-VLAN Routing tekniğini (Router on a Stick ve Legacy Inter-VLAN Routing) pratik olarak uygulamayı ve karşılaştırmayı sağlar.
+
+**Hedefler:**
+
+* **Router on a Stick Bölümü:**
+    * Anahtar yapılandırması sonrası aynı VLAN'deki PC5 ve PC6'nın birbirine ping atabilmesi.
+    * Yönlendirici yapılandırması sonrası PC5'in farklı VLAN'deki PC7'ye ping ile erişebilmesi.
+* **Legacy Inter-VLAN Routing Bölümü:**
+    * PC1'in farklı bir VLAN'deki PC3'e ping ile erişebilmesi.
+
+**Ek Notlar:**
+
+* "Router on a Stick" topolojisinde, PC6 ve PC7'nin topoloji diyagramında aynı porta bağlı gibi görünmesine rağmen, fiziksel olarak farklı switch portlarına (örn: Fa0/1 ve Fa0/2) bağlanması gerekmektedir. Lütfen .pkt dosyasında bu düzenlemeyi yapınız.
+* PC'lere (PC1, PC3, PC5, PC6, PC7) doğru IP adresi, alt ağ maskesi ve varsayılan ağ geçidi bilgilerini girdiğinizden emin olun.
+
 ## Katkıda Bulunma
 
-Geri bildirimleriniz veya iyileştirme önerileriniz için issues açmaktan çekinmeyin.
+Geri bildirimleriniz, hata düzeltmeleri veya yeni lab önerileriniz için lütfen bir "issue" açın veya "pull request" gönderin.
 
 ## Lisans
 
-Bu proje için herhangi bir açık kaynak lisansı belirtilebilir. (Örn: MIT, Apache 2.0 vb. Veya "Tüm Hakları Saklıdır" diyebilirsiniz.)
+Tüm Hakları Saklıdır. (Veya isteğe bağlı olarak uygun bir açık kaynak lisansı seçebilirsiniz.)
