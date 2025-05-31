@@ -6,7 +6,7 @@ Bu proje, Cisco Packet Tracer kullanılarak tasarlanmış bir ağ topolojisi üz
 
 Bu depoda aşağıdaki dosyalar bulunmaktadır:
 
-* `.pkt` dosyası: Cisco Packet Tracer topoloji dosyası. Bu dosyayı Cisco Packet Tracer yazılımı ile açabilirsiniz.
+* `Lab3_VLAN_Uygulamasi.pkt` dosyası: Cisco Packet Tracer topoloji dosyası. Bu dosyayı Cisco Packet Tracer yazılımı ile açabilirsiniz.
 
 ## Lab Hedefleri
 
@@ -37,7 +37,7 @@ Yapılandırmalar tamamlandıktan sonra aşağıdaki erişilebilirlik testleri b
 ## Kurulum ve Kullanım
 
 1.  Bu depoyu bilgisayarınıza klonlayın veya indirin.
-2.  `[Proje Adı].pkt` dosyasını Cisco Packet Tracer yazılımı ile açın.
+2.  `Lab3_VLAN_Uygulamasi.pkt` dosyasını Cisco Packet Tracer yazılımı ile açın.
 3.  Yukarıda belirtilen "Yapılacaklar" adımlarını takip ederek ağ cihazlarını yapılandırın.
 4.  "Lab Hedefleri" bölümündeki testleri yaparak yapılandırmalarınızı doğrulayın.
 
