@@ -28,7 +28,7 @@ Genel olarak, bu lablar aşağıdaki becerileri geliştirmeyi ve doğrulamayı a
 ## Kurulum ve Kullanım
 
 1.  Bu depoyu bilgisayarınıza klonlayın veya ZIP olarak indirin.
-2.  İlgili `.pkt` dosyasını (örn: `stp_uygulama_2.pkt`, `Lab3_VLAN_Uygulamasi.pkt` veya `Lab4_IVR_Uygulamasi.pkt`) Cisco Packet Tracer yazılımı ile açın.
+2.  İlgili `.pkt` dosyasını (örn: `Lab1_STP_Uygulamasi/Lab1_STP_Uygulamasi.pkt`, `Lab2_VLAN_Uygulamasi/Lab2_VLAN_Uygulamasi.pkt` veya `Lab3_IVR_Uygulamasi/Lab3_IVR_Uygulamasi.pkt`) Cisco Packet Tracer yazılımı ile açın.
 3.  Her labın ilgili bölümünde belirtilen talimatları ve hedefleri takip ederek cihazları yapılandırın.
 4.  Yapılandırmalarınızı doğrulamak için belirtilen testleri gerçekleştirin.
 
@@ -40,7 +40,7 @@ Genel olarak, bu lablar aşağıdaki becerileri geliştirmeyi ve doğrulamayı a
 
 ### Lab 1: Spanning Tree Protocol (STP) Uygulaması
 
-**Dosya Adı:** `stp_uygulama_2.pkt`
+**Dosya Adı:** `Lab1_STP_Uygulamasi/Lab1_STP_Uygulamasi.pkt`
 
 Bu lab, ağdaki yedekli bağlantıların yönetimi ve döngülerin önlenmesi için Spanning Tree Protocol'ün (STP) temel prensiplerini ve yapılandırmalarını anlamaya odaklanır. Kök anahtar seçimi ve port durumları incelenir.
 
@@ -55,7 +55,7 @@ Bu lab, ağdaki yedekli bağlantıların yönetimi ve döngülerin önlenmesi i�
 
 ### Lab 2 (Lab3): Temel Switch ve VLAN Yapılandırması
 
-**Dosya Adı:** `Lab3_VLAN_Uygulamasi.pkt`
+**Dosya Adı:** `Lab2_VLAN_Uygulamasi/Lab2_VLAN_Uygulamasi.pkt`
 
 Bu lab, özellikle VLAN oluşturma, erişim portu ve trunk port yapılandırmaları, anahtarlara IP adresi atama ve temel yönetim (hostname, enable secret, Telnet) konularına odaklanır.
 
@@ -70,7 +70,7 @@ Bu lab, özellikle VLAN oluşturma, erişim portu ve trunk port yapılandırmala
 
 ### Lab 3 (Lab4): Inter-VLAN Routing (Router on a Stick ve Legacy)
 
-**Dosya Adı:** `Lab4_IVR_Uygulamasi.pkt`
+**Dosya Adı:** `Lab3_IVR_Uygulamasi/Lab3_IVR_Uygulamasi.pkt`
 
 Bu lab, iki yaygın Inter-VLAN Routing tekniğini (Router on a Stick ve Legacy Inter-VLAN Routing) pratik olarak uygulamayı ve karşılaştırmayı sağlar.
 
