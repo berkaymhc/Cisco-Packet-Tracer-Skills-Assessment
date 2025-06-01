@@ -2,6 +2,17 @@
 
 Bu depo, Cisco Packet Tracer kullanılarak tasarlanmış çeşitli ağ topolojileri üzerinde farklı ağ yapılandırma senaryolarını ve becerilerini sergileyen bir laboratuvar koleksiyonudur. Her bir lab, belirli ağ kavramlarını ve yapılandırma yöntemlerini (VLAN'ler, Trunking, Inter-VLAN Routing, Temel Anahtar ve Yönlendirici Yapılandırmaları, Spanning Tree Protocol vb.) pekiştirmek amacıyla tasarlanmıştır.
 
+## STP Protokol Karşılaştırması
+
+| Protokol          | Hız   | VLAN Desteği      | Uyumluluk             | Üretici |
+| :---------------- | :---- | :---------------- | :-------------------- | :------ |
+| STP (802.1D)      | Yavaş | Hayır             | Tüm cihazlar          | IEEE    |
+| PVST              | Yavaş | Evet (Her VLAN)   | Cisco cihazlar        | Cisco   |
+| PVST+             | Yavaş | Evet              | IEEE cihazlarla uyumlu | Cisco   |
+| RSTP (802.1w)     | Hızlı | Hayır             | 802.1D ile uyumlu     | IEEE    |
+| Rapid PVST+       | Hızlı | Evet              | Cisco cihazlar        | Cisco   |
+| MSTP (802.1s)     | Hızlı | Evet (Gruplanmış VLAN) | 802.1w uyumlu         | IEEE    |
+
 ## İçerik
 
 Bu depo, aşağıdaki bağımsız ağ lablarını içermektedir:
