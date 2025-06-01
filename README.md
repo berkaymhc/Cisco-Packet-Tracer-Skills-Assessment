@@ -9,6 +9,7 @@ Bu depo, aşağıdaki bağımsız ağ lablarını içermektedir:
 * **Lab1: Spanning Tree Protocol (STP) Uygulaması**
 * **Lab2: Temel Switch ve VLAN Yapılandırması (SRWE Practice Pt Skills Assessment Part 2)**
 * **Lab3: Inter-VLAN Routing (Router on a Stick ve Legacy)**
+* **Lab4: STP Çoklu VLAN Uygulaması**
 
 Her bir labın kendi `.pkt` dosyası bu deponun kök dizininde yer almaktadır.
 
@@ -81,6 +82,21 @@ Bu lab, iki yaygın Inter-VLAN Routing tekniğini (Router on a Stick ve Legacy I
     * Yönlendirici yapılandırması sonrası PC5'in farklı VLAN'deki PC7'ye ping ile erişebilmesi.
 * **Legacy Inter-VLAN Routing Bölümü:**
     * PC1'in farklı bir VLAN'deki PC3'e ping ile erişebilmesi.
+    
+### Lab 4: STP Çoklu VLAN Uygulaması
+
+**Dosya Adı:** `Lab4_STP_MultiVLAN_Uygulamasi/STP_Coklu_VLAN_Uygulama.pkt`
+
+Bu lab, farklı VLAN'ler için Spanning Tree Protocol (STP) davranışını ve her VLAN için ayrı kök anahtarları belirlemeyi pratik olarak uygulamayı amaçlar. PVST+ (Per-VLAN Spanning Tree Plus) mantığını ve ağdaki yedekli yolların her VLAN bazında nasıl yönetildiğini anlamayı sağlar.
+
+**Hedefler:**
+
+* Her bir VLAN (VLAN 1, VLAN 10, VLAN 20) için ayrı kök anahtarları (Root Bridge) belirleme ve doğrulama.
+* VLAN'ler arası STP davranışını gözlemleme ve farklı VLAN'ler için farklı ağ yollarının nasıl aktif olduğunu anlama.
+* Trunk port yapılandırmasının STP üzerindeki etkisini gözlemleme ve `show interfaces trunk` çıktısını anlama.
+* Belirlenen kök anahtarlara göre anahtar port rollerini (Root, Designated, Alternate/Blocked) analiz etme.
+* Topolojideki yedekli yolların STP tarafından her VLAN için nasıl yönetildiğini (engellendiğini) doğrulama.
+* Ping testleri ile VLAN içi iletişimi doğrulama ve STP tarafından engellenen yolları veya VLAN'ler arası iletişimi gözlemleme.
 
 **Ek Notlar:**
 
