@@ -10,6 +10,7 @@ Bu depo, aşağıdaki bağımsız ağ lablarını içermektedir:
 * **Lab2: Temel Switch ve VLAN Yapılandırması (SRWE Practice Pt Skills Assessment Part 2)**
 * **Lab3: Inter-VLAN Routing (Router on a Stick ve Legacy)**
 * **Lab4: STP Çoklu VLAN Uygulaması**
+* **Lab5: STP Yol Seçimi ve STP Security**
 
 Her bir labın kendi `.pkt` dosyası bu deponun kök dizininde yer almaktadır.
 
@@ -85,7 +86,9 @@ Bu lab, iki yaygın Inter-VLAN Routing tekniğini (Router on a Stick ve Legacy I
     
 ### Lab 4: STP Çoklu VLAN Uygulaması
 
-**Dosya Adı:** `Lab4_STP_MultiVLAN_Uygulamasi/STP_Coklu_VLAN_Uygulama.pkt`
+**Dosya Adı:** `Lab4_STP_MultiVLAN_Uygulamasi/stp_çoklu_vlan_uygulama.pkt`
+
+*Not: Bu Packet Tracer dosyası, tekli VLAN STP ve çoklu VLAN STP senaryoları dahil olmak üzere farklı STP topolojilerini içermektedir.*
 
 Bu lab, farklı VLAN'ler için Spanning Tree Protocol (STP) davranışını ve her VLAN için ayrı kök anahtarları belirlemeyi pratik olarak uygulamayı amaçlar. PVST+ (Per-VLAN Spanning Tree Plus) mantığını ve ağdaki yedekli yolların her VLAN bazında nasıl yönetildiğini anlamayı sağlar.
 
@@ -97,6 +100,21 @@ Bu lab, farklı VLAN'ler için Spanning Tree Protocol (STP) davranışını ve h
 * Belirlenen kök anahtarlara göre anahtar port rollerini (Root, Designated, Alternate/Blocked) analiz etme.
 * Topolojideki yedekli yolların STP tarafından her VLAN için nasıl yönetildiğini (engellendiğini) doğrulama.
 * Ping testleri ile VLAN içi iletişimi doğrulama ve STP tarafından engellenen yolları veya VLAN'ler arası iletişimi gözlemleme.
+
+### Lab 5: STP Yol Seçimi ve STP Security
+
+**Dosya Adı:** `Lab5_STP_Path_Selection_and_Security/stp_path_selection_and_security.pkt`
+
+Bu lab, Spanning Tree Protocol (STP) yol seçimi mekanizmalarını derinlemesine incelemeyi ve ağdaki STP güvenlik özelliklerinin (örneğin, BPDU Guard, PortFast) yapılandırılması ve etkilerini anlamayı amaçlar. Ağdaki potansiyel döngüleri önlerken aynı zamanda ağın güvenliğini sağlamanın önemini vurgular.
+
+**Hedefler:**
+
+* STP'nin yol seçimi kriterlerini (Root Bridge seçimi, Root Port seçimi, Designated Port seçimi) anlama ve farklı senaryolarda bu seçimlerin nasıl yapıldığını gözlemleme.
+* Port maliyetleri ve port öncelikleri gibi parametrelerin STP yol seçimi üzerindeki etkilerini manipüle etme.
+* STP güvenlik özelliklerinden BPDU Guard ve PortFast'ı yapılandırma ve test etme.
+* BPDU Guard'ın yetkisiz BPDU'ları nasıl algıladığını ve portları nasıl devre dışı bıraktığını gözlemleme.
+* PortFast'ın portları hızla forwarding durumuna getirme yeteneğini ve bunun potansiyel risklerini anlama.
+* `show spanning-tree` ve `show running-config` gibi komutlarla STP yapılandırmasını ve durumunu doğrulama.
 
 **Ek Notlar:**
 
