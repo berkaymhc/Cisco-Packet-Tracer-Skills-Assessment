@@ -127,6 +127,22 @@ Bu lab, Spanning Tree Protocol (STP) yol seçimi mekanizmalarını derinlemesine
 * PortFast'ın portları hızla forwarding durumuna getirme yeteneğini ve bunun potansiyel risklerini anlama.
 * `show spanning-tree` ve `show running-config` gibi komutlarla STP yapılandırmasını ve durumunu doğrulama.
 
+### Lab 6: LACP (Link Aggregation Control Protocol) Uygulaması
+
+**Dosya Adı:** `Lab6_LACP_Uygulamasi/LACP.pkt`
+
+Bu lab, Cisco anahtarları arasında bant genişliğini artırmak ve yedeklilik sağlamak amacıyla Link Aggregation Control Protocol (LACP) kullanarak EtherChannel yapılandırmasını öğrenmeyi ve doğrulamayı amaçlar.
+
+**Hedefler:**
+
+* İki Cisco anahtarı arasında LACP kullanarak EtherChannel (Port-channel) oluşturma.
+* LACP'nin `active` ve `passive` modlarını yapılandırma ve bu modların EtherChannel oluşumunu nasıl etkilediğini gözlemleme.
+* (Opsiyonel) PAgP'nin `desirable` ve `auto` modlarını karşılaştırma ve uygulama.
+* Oluşturulan EtherChannel üzerinden birden fazla VLAN'i (örneğin VLAN 10 ve VLAN 20) trunk olarak geçirme.
+* EtherChannel'ın mantıksal olarak tek bir arayüz gibi çalışmasını doğrulama.
+* `show etherchannel summary`, `show etherchannel port-channel`, `show interfaces trunk` gibi komutlarla EtherChannel yapılandırmasını ve aktif durumunu doğrulama.
+* Ağa bağlı bilgisayarlar ve dizüstü bilgisayarlar arasında ping testleri yaparak VLAN içi iletişimi ve EtherChannel'ın başarılı çalışmasını doğrulama.
+
 **Ek Notlar:**
 
 * "Router on a Stick" topolojisinde, PC6 ve PC7'nin topoloji diyagramında aynı porta bağlı gibi görünmesine rağmen, fiziksel olarak farklı switch portlarına (örn: Fa0/1 ve Fa0/2) bağlanması gerekmektedir. Lütfen .pkt dosyasında bu düzenlemeyi yapınız.
